@@ -1,0 +1,97 @@
+/* 1. Cores e Tipos de Letra (Variáveis) */
+:root {
+    --cor-principal: #ac391c; 
+    --cor-fundo: #c4a620b2;        
+    --cor-texto: #1e293b;        
+}
+
+/* 2. Configuração geral da página */
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 1;
+    padding: 0;
+}
+
+/* 3. Estilo do cabeçalho */
+header {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 13px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Importante para o menu absoluto se posicionar aqui dentro */
+}  
+
+/* ==========================================================
+   ESTILOS DO MENU DE NAVEGAÇÃO (CSS-only)
+   ========================================================== */
+
+/* Esconde a caixinha de seleção real */
+.menu-checkbox {
+    display: none;
+}
+
+/* Estilo dos botões do menu */
+.btn-menu {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    padding: 5px 10px;
+}
+
+/* De início: mostra o botão de abrir e esconde o de fechar */
+.btn-abrir {
+    display: block;
+}
+
+.btn-fechar {
+    display: none;
+}
+
+/* De início: o menu de navegação fica escondido */
+.menu-navegacao {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-principal);
+    padding: 15px 0;
+}
+
+.menu-navegacao ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu-navegacao li {
+    margin: 10px 0;
+}
+
+.menu-navegacao a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.menu-navegacao a:hover {
+    text-decoration: underline;
+}
+
+/* A MÁGICA: O que acontece quando o checkbox é marcado (clicado) */
+.menu-checkbox:checked ~ .btn-abrir {
+    display: none; /* Esconde o botão de abrir */
+}
+
+.menu-checkbox:checked ~ .btn-fechar {
+    display: block; /* Mostra o botão de fechar (o X) */
+}
+
+.menu-checkbox:checked ~ .menu-navegacao {
+    display: block; /* Mostra o menu de navegação */
+}
