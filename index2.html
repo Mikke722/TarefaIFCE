@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Cadastro de Motos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Área de Administração - Mundo das Motos</h1>
+      
+        <!-- O interruptor invisível -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+        <!-- Botão de ABRIR (ícone de 3 barrinhas) -->
+        <label for="menu-toggle" class="btn-menu btn-abrir">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <!-- Botão de FECHAR (ícone de X) -->
+        <label for="menu-toggle" class="btn-menu btn-fechar">
+            <i class="fas fa-times"></i>
+        </label>
+    </header>
+
+    <!-- Menu de Navegação -->
+    <nav>
+        <ul>
+            <li><a href="index2.html">Voltar para o Site Público</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="cadastro-de-motos.html">Cadastro de Motos</a></li>
+            <li><a href="cadastro-usuarios.html">Cadastro de Usuários</a></li>
+        </ul>
+        <!-- O Menu de Navegação -->
+        <nav class="menu-navegacao">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </nav>
+
+    <hr>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <h2>Gerenciamento de Motos</h2>
+
+        <!-- 1. Formulário para Cadastro / Edição -->
+        <section>
+            <h3>Cadastrar / Editar Moto</h3>
+            <form>
+                <div>
+                    <label for="modelo">Modelo da Moto:</label><br>
+                    <input type="text" id="modelo" name="modelo" required>
+                </div>
+                <br>
+                <div>
+                    <label for="marca">Marca:</label><br>
+                    <input type="text" id="marca" name="marca" required>
+                </div>
+                <br>
+                <div>
+                    <label for="cilindrada">Cilindrada (cc):</label><br>
+                    <input type="number" id="cilindrada" name="cilindrada">
+                </div>
+                <br>
+                <button type="submit">Salvar Moto</button>
+            </form>
+        </section>
+    </main>
+
+    <footer style="color: crimson;"><p>feito por Micael</p></footer>
+
+</body>
+</html>
